@@ -1,0 +1,132 @@
+.navbar {
+    width: 100%;
+    background: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 0.5s ease;
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: #202b3c;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+    }
+
+
+    .nav-cont {
+        width: 98%;
+
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-menu {
+            width: 50%;
+            height: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .logo {
+                margin-right: 20px;
+            }
+
+            .search-box {
+                background: #202b3c;
+                height: 40px;
+                border-radius: 50px;
+
+
+                &:hover>.search-btn {
+                    background: #fff;
+                    color: #202b3c;
+                    border: 1px solid;
+                }
+
+                &:hover>.search-input {
+                    width: 240px;
+                    padding: 0 15px;
+                }
+
+                .search-input {
+                    outline: none;
+                    border: none;
+                    background: none;
+                    width: 0;
+                    padding: 0;
+                    color: #fff;
+                    float: left;
+                    font-size: 16px;
+                    transition: .3s;
+                    line-height: 40px;
+
+                    &:focus+.search-btn,
+                    &:not(:placeholder-shown)+.search-btn {
+                        background: #fff;
+                        color: #202b3c;
+                        border: 1px solid;
+                    }
+
+                    &:focus,
+                    &:not(:placeholder-shown) {
+                        width: 240px;
+                        padding: 0 15px;
+                    }
+
+                    &::placeholder {
+                        color: #fcc0c1;
+                    }
+                }
+
+                .search-btn {
+                    color: rgb(0, 0, 0);
+                    float: right;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.2em;
+                    border-radius: 50px;
+                    background: white;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    border: 1px solid #202b3ccc;
+                    outline: none;
+                    transition: .3s;
+                }
+            }
+        }
+
+        .right-menu {
+            width: 50%;
+            height: 100%;
+
+            .nav-items {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 25px;
+                list-style: none;
+            }
+        }
+    }
+}
+
+.scroll-effect {
+    height: 80px;
+    transition: 0.5s ease;
+}
