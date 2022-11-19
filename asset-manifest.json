@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/PJSSR/static/css/main.8acdb048.css",
+    "main.js": "/PJSSR/static/js/main.db64fb1c.js",
+    "static/media/thisisengineering-raeng-lx8CooX66ms-unsplash.jpg": "/PJSSR/static/media/thisisengineering-raeng-lx8CooX66ms-unsplash.597aab829ca05a85de32.jpg",
+    "static/media/homepagevector.jpg": "/PJSSR/static/media/homepagevector.3fbe116317b2fa806f92.jpg",
+    "static/media/ej-yao-D46mXLsQRJw-unsplash.jpg": "/PJSSR/static/media/ej-yao-D46mXLsQRJw-unsplash.a00624ddb56b08281583.jpg",
+    "static/media/maksym-kaharlytskyi-u13zBF4r56A-unsplash.jpg": "/PJSSR/static/media/maksym-kaharlytskyi-u13zBF4r56A-unsplash.eb0c4f5142c287ea594f.jpg",
+    "static/media/Picsart_22-11-14_08-52-30-755.png": "/PJSSR/static/media/Picsart_22-11-14_08-52-30-755.01767444fad6db283f64.png",
+    "index.html": "/PJSSR/index.html",
+    "main.8acdb048.css.map": "/PJSSR/static/css/main.8acdb048.css.map",
+    "main.db64fb1c.js.map": "/PJSSR/static/js/main.db64fb1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8acdb048.css",
+    "static/js/main.db64fb1c.js"
+  ]
+}
