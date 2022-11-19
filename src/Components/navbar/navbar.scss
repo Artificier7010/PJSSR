@@ -1,6 +1,7 @@
 .navbar {
     width: 100%;
-    background: white;
+    background: linear-gradient(to bottom,transparent 0%,white);
+    // background-color: white;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -11,15 +12,15 @@
     z-index: 999;
     transition: 0.5s ease;
 
-    &::before{
-        content: "";
-        width: 100%;
-        height: 5px;
-        background: #202b3c;
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-    }
+    // &::before {
+    //     content: "";
+    //     width: 100%;
+    //     height: 5px;
+    //     background: #202b3c;
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0px;
+    // }
 
 
     .nav-cont {
@@ -94,7 +95,7 @@
                     float: right;
                     width: 40px;
                     height: 40px;
-                    font-size: 1.2em;
+                    font-size: 1em;
                     border-radius: 50px;
                     background: white;
                     cursor: pointer;
@@ -102,7 +103,6 @@
                     justify-content: center;
                     align-items: center;
                     text-decoration: none;
-                    border: 1px solid #202b3ccc;
                     outline: none;
                     transition: .3s;
                 }
@@ -121,6 +121,46 @@
                 align-items: center;
                 gap: 25px;
                 list-style: none;
+
+                .routes {
+                    display: flex;
+                    justify-content: center;
+                    color: var(--main-color);
+                    align-items: center;
+                    height: 30px;
+                    font-weight: 500;
+                    padding: 10px 6px;
+                    transition: 0.5s ease;
+                    cursor: pointer;
+                    position: relative;
+
+                    .menuitmrev {
+                        margin-left: 5px;
+                    }
+
+                    &:hover {
+                        color: var(--main-second-color);
+                    }
+
+                    &::before {
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        background: var(--main-second-color);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transition: 0.5s ease;
+
+                    }
+
+                    &:hover::before {
+                        transition: 0.5s ease;
+                        width: 100%;
+
+                    }
+
+                }
             }
         }
     }

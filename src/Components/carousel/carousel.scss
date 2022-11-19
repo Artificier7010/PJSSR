@@ -1,26 +1,79 @@
-.header-content{
-    color: white;
-    position: absolute;
-    overflow: hidden;
+.carousel-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-    top: 50%;
-    left: 20%;
-    z-index: 3;
-    h1{
-        font-size: 2.5vw;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.8;
+        object-fit: cover;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.663);
+            position: relative;
+            z-index: 1;
+
+        }
     }
-    &.headactive{
-        animation:fadeInUp 2s 0.3s ease backwards;
+    .header-content {
+        color: white;
+        margin-left: 200px;
+        opacity: 1;
 
+        .headercontent-wrap{
+            text-align: left;
+            line-height: 1.5;
+            .lighttxt{
+                font-family: var(--font1);
+                letter-spacing: 2px;
+                font-weight: 100;
+                color: var(--second-color);
+                font-size: 5vw;
+            }
+            .boldtxt{
+                font-family: var(--font2);
+                font-weight: 500;
+                letter-spacing: 2px;
+                font-size: 6vw;
+            }
+            .bottline{
+                font-family: var(--font3);
+                font-size: 2vw;
+                letter-spacing: 2px;
+                font-weight: 100;
+
+            }
+        }
+
+
+        &.headactive {
+            animation: fadeInUp 2s 0.3s ease backwards;
+
+        }
     }
-
-    
-
 }
 
 
 
-@keyframes fadeInUp{
-    0%{transform:translate(0px, 100px); opacity: 0;}
-    100%{transform:translate(0px, 0); opacity: 1;}
-  }
+@keyframes fadeInUp {
+    0% {
+        transform: translate(0px, 100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0);
+        opacity: 1;
+    }
+}
