@@ -1,6 +1,6 @@
 .navbar {
     width: 100%;
-    background: linear-gradient(to bottom,transparent 0%,white);
+    background: rgba(255, 255, 255, 0.558);
     // background-color: white;
     height: 100px;
     display: flex;
@@ -169,4 +169,5 @@
 .scroll-effect {
     height: 80px;
     transition: 0.5s ease;
+    background: rgba(255, 255, 255, 0.726);
 }

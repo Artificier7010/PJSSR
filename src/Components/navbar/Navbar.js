@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './navbar.scss';
-import logo from '../../Assets/Images/Picsart_22-11-14_08-52-30-755.png';
+import logo from '../../Assets/Images/logolight.png';
 import { FaHome, FaInfo, FaMailBulk, FaNewspaper, FaSearch, FaServicestack } from 'react-icons/fa';
 
 const Navbar = () => {
