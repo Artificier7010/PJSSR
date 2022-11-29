@@ -25,7 +25,6 @@
 
     .nav-cont {
         width: 98%;
-
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -112,6 +111,94 @@
         .right-menu {
             width: 50%;
             height: 100%;
+            position: relative;
+
+            .nav-item-mobile {
+                width: 100%;
+                height: 100%;
+                display: none;
+                justify-content: flex-end;
+                align-items: center;
+                position: relative;
+                
+
+                button {
+                    margin-right: 25px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 2em;
+                    color: var(--main-color);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .nav-items-for-mobl {
+
+                    list-style: none;
+                    position: absolute;
+                    top: 102%;
+                    left: -102%;
+                    width: 100vw;
+                    visibility: hidden;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: 0.5s ease;
+                    background: white;
+                    background: rgba(255, 255, 255, 0.558);
+
+                    &.openedmenu {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: 0.5s ease;
+                    }
+                    &.navscrleffect{
+                        background: white;
+                    }
+
+                    .routes-mbl {
+                        display: flex;
+                        justify-content: center;
+                        color: var(--main-color);
+                        align-items: center;
+                        height: 30px;
+                        font-weight: 500;
+                        padding: 10px 6px;
+                        transition: 0.5s ease;
+                        cursor: pointer;
+                        position: relative;
+
+
+                        .menuitmrev {
+                            margin-left: 5px;
+                        }
+
+                        &:hover {
+                            color: var(--main-second-color);
+                        }
+
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 2px;
+                            background: var(--main-second-color);
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transition: 0.5s ease;
+
+                        }
+
+                        &:hover::before {
+                            transition: 0.5s ease;
+                            width: 100%;
+
+                        }
+
+                    }
+                }
+            }
 
             .nav-items {
                 width: 100%;
@@ -170,4 +257,35 @@
     height: 80px;
     transition: 0.5s ease;
     background: rgba(255, 255, 255, 0.726);
+}
+
+
+@media screen and (max-width:990px) {
+    .navbar {
+        box-shadow: 0 0 20px gray;
+
+        .nav-cont {
+            .left-menu {
+                .search-box {
+                    display: none;
+                }
+            }
+
+            .right-menu {
+                .nav-item-mobile {
+                    display: flex;
+                }
+
+                .nav-items {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .scroll-effect {
+        background: white;
+    }
+
+
 }

@@ -77,3 +77,25 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width:990px) {
+    .carousel-wrapper{
+        
+        .header-content{
+            margin-left: 50px;
+            .headercontent-wrap{
+                .lighttxt{
+                    font-size:9vw;
+                }
+                .boldtxt{
+                    font-size: 8vw;
+                }
+                .bottline{
+                    font-size: 5vw;
+                }
+
+            }
+        }
+    }
+
+}

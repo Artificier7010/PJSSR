@@ -4,6 +4,7 @@
     display: flex;
     gap: 15px;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
 
     .newslist-card {
@@ -55,4 +56,15 @@
             }
         }
     }
+}
+
+@media screen and (max-width:990px) {
+    .newslist{
+        padding: 50px 0;
+        .newslist-card{
+            width: 100%;
+        }
+    }
+   
+
 }

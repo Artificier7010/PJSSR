@@ -8,6 +8,7 @@
     color: white;
     align-items: center;
     background:var(--main-color);
+    flex-wrap: wrap;
     .footcol{
         width:calc(100% /5);
         .contact-icons{
@@ -80,6 +81,18 @@
             color: aliceblue;
             font-weight: 500;
             font-family: var(--font2);
+        }
+    }
+
+}
+
+
+@media screen and (max-width:990px) {
+    .footer{
+        height: auto;
+        .footcol{
+            width: 100%;
+            margin: 20px 0;
         }
     }
 
