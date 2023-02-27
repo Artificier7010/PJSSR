@@ -13,7 +13,7 @@ import { useState } from 'react';
 
 
 const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
-  return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/'} />
+  return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/PJSSR'} />
 }
 
 
@@ -27,7 +27,7 @@ function App() {
         <div className="App">
           <Routes>
             
-            <Route path='/' element={<Homepage />} />
+            <Route path='/PJSSR' element={<Homepage />} />
             <Route path='/aboutus/:abtid' element={<Aboutpage />} />
             <Route path='/services/:srvcid' element={<Servicepage />} />
             <Route path='/latestnews' element={<Newspage />} />
