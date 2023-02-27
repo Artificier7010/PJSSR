@@ -26,10 +26,19 @@
 
         }
     }
+    .black-overlay{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right,rgba(0, 0, 0, 0.226),rgba(0, 0, 0, 0.336),rgba(0, 0, 0, 0.478),rgba(0, 0, 0, 0.511));
+        position: absolute;
+        top: 0;
+        left:0;
+    }
     .header-content {
-        color: white;
         margin-left: 200px;
         opacity: 1;
+        position: relative;
+        z-index: 2;
 
         .headercontent-wrap{
             text-align: left;
@@ -38,7 +47,6 @@
                 font-family: var(--font1);
                 letter-spacing: 2px;
                 font-weight: 100;
-                color: var(--second-color);
                 font-size: 5vw;
             }
             .boldtxt{

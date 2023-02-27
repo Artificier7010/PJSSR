@@ -1,0 +1,65 @@
+.Gridview {
+    width: 100%;
+
+    .grid-container {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 350px 350px 350px 350px;
+        padding: 10px;
+        justify-content: center;
+        gap: 15px;
+
+        .grid-item {
+            height: 350px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgb(181, 181, 181);
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            text-decoration: none;
+
+            &:hover .img-box img{
+                scale: 1.2;
+                transition: 1s ease;
+
+            }
+
+            .img-box {
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 1s ease;
+                }
+            }
+
+            .grid-card-content {
+                padding: 10px;
+                h3 {
+                    font-size: 0.8vw;
+                    margin: 10px 0;
+                    text-align: left;
+                    color: black;
+
+                }
+
+                h1 {
+                    font-size: 1vw;
+                    text-align: left;
+                    font-weight: 500;
+                    color: black;
+
+                }
+            }
+
+        }
+
+    }
+}

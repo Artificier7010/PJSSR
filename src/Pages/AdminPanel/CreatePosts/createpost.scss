@@ -1,0 +1,115 @@
+.Createposts {
+    width: 100%;
+
+    .crt-post-wraper {
+        width: 100%;
+
+        form {
+            width: 100%;
+            margin-top: 25px;
+
+            .img-show-wrap {
+                width: 100%;
+                height: 50vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .show-wrap-left {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    border: 2px solid;
+
+                    img {
+                        width: 100%;
+                        height: 90%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                }
+
+                .show-wrap-right {
+                    width: 50%;
+                    padding: 10px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                }
+
+
+            }
+
+            .row {
+                width: 100%;
+                height: 40px;
+                border-radius: 5px;
+                overflow: hidden;
+                background: rgba(231, 231, 231, 0.881);
+
+                input,
+                select {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    padding: 0 15px;
+                    background: transparent;
+                }
+
+                .pub-btn {
+                    width: 100%;
+                    height: 100%;
+                    background: #4681f4;
+                    color: white;
+                    border: none;
+                    font-weight: 600;
+                    outline: none;
+                    border-radius: 5px;
+
+
+                    &:hover {
+                        background: white;
+                        border: 1px solid #4681f4;
+                        color: #4681f4;
+                    }
+                }
+            }
+
+            .row-wo-he {
+                width: 100%;
+                border-radius: 5px;
+                overflow: hidden;
+                background: rgba(231, 231, 231, 0.881);
+
+                input,
+                select {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    outline: none;
+                    padding: 0 15px;
+                    background: transparent;
+                }
+
+                textarea {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    padding: 10px 15px;
+                    resize: none;
+                    background: transparent;
+
+
+
+                }
+            }
+        }
+    }
+}

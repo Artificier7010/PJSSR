@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import MyCarousel from '../../Components/carousel/MyCarousel';
 import Navbar from '../../Components/navbar/Navbar';
 import vectorimg from '../../Assets/Images/homepagevector.jpg';
-import placeholderimg from '../../Assets/Images/placeholder-image.jpg';
 import './homepage.scss';
 import Newslist from '../../Components/newslist/Newslist';
 import Footer from '../../Components/footer/Footer';

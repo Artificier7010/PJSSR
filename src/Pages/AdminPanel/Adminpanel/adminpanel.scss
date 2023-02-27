@@ -1,0 +1,304 @@
+$sidebar-width: 70px;
+
+.Adminpanel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .admin-panel-wrap {
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+
+        .admin-panel-header {
+            width: 100%;
+            height: 60px;
+            box-shadow: 0 0 10px gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+
+
+            .header-left {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    list-style: none;
+                    gap: 25px;
+                    margin-left: 25px;
+
+                    li {
+                        .sidebar-btn {
+                            width: 25px;
+                            height: 25px;
+                            background: transparent;
+                            font-size: 20px;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-items: center;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                            transition: 0.5s ease;
+                            color: #4681f4;
+                            // border: 1px solid red;
+                            gap: 4px;
+
+
+                            .bar {
+                                width: 100%;
+                                height: 3px;
+                                background: black;
+                                transition: 0.5s ease;
+
+                            }
+
+                            &:hover {
+                                background: rgba(180, 180, 180, 0.715);
+                                transition: 0.5s ease;
+                            }
+
+                            &.clicked {
+                                position: relative;
+
+
+                                .bar:nth-child(1) {
+                                    transform-origin: center;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    rotate: 45deg;
+                                    transition: 0.5s ease;
+                                }
+
+                                .bar:nth-child(2) {
+                                    opacity: 0;
+                                }
+
+                                .bar:nth-child(3) {
+                                    position: absolute;
+                                    transform-origin: center;
+                                    top: 50%;
+                                    left: 0%;
+
+                                    rotate: -45deg;
+                                    transition: 0.5s ease;
+                                }
+
+
+
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .header-right {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                button {
+                    margin-right: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 16px;
+                    border: none;
+                    border-radius: 6px;
+                    background: #4681f4;
+                    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                    color: rgb(255, 255, 255);
+                    font-weight: 600;
+                    transition: 0.5s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: transparent;
+                        border: 1px solid #4681f4;
+                        color: #4681f4;
+                        transition: 0.5s ease;
+
+                    }
+
+                }
+
+
+
+
+            }
+        }
+
+        .sect-wrap {
+            width: 100%;
+            height: 92vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .side-bar {
+                width: $sidebar-width;
+                height: 100%;
+                transition: 0.5s ease;
+                box-shadow: 2px 0 10px rgb(185, 185, 185);
+
+                &.toggled {
+                    $sidebar-width: 200px;
+                    width: $sidebar-width;
+                    transition: 0.5s ease;
+                }
+
+                .side-bar-wrap {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    ul {
+                        width: 95%;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 15px;
+                        margin-top: 15px;
+                        transition: 0.5s ease-in-out;
+
+                        li {
+                            border-radius: 6px;
+                           
+                            background: #4681f4;
+                            height: 40px;
+
+                            &.toggled {
+                                width: 95%;
+                                background: rgba(225, 225, 225, 0.836);
+                                border-radius: 0;
+
+
+                                &:hover a {
+                                    border-bottom: 1px solid #4681f4;
+                                    
+
+
+                                }
+
+
+                                a {
+                                    width: 100%;
+                                    height: 100%;
+                                    justify-content: flex-start;
+                                    font-size: 1vw;
+                                    color: #4681f4;
+                                    box-sizing: border-box;
+                                   
+
+
+                                }
+                            }
+
+                            a {
+                                width: 100%;
+                                height: 100%;
+                                padding: 10px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 25px;
+                                font-weight: 700;
+                                color: #ffffff;
+                                text-decoration: none;
+                                overflow: hidden;
+
+                                div{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                }
+                               
+
+
+                            }
+                        }
+
+                    }
+                    .bottom{
+                        display: flex;
+                        width: 95%;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        &.toggled{
+                            height: 40px;
+                            a{
+                                width: 100%;
+                                height: 100%;
+                                justify-content: flex-start;
+                                font-size: 1vw;
+
+
+                            }
+                        }
+
+                        a{
+                            
+                            padding: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 25px;
+                            font-weight: 700;
+                            color: #ffffff;
+                            text-decoration: none;
+                            overflow: hidden;
+                            background: #4681f4;
+                            border-radius: 6px;
+
+                        }
+
+                    }
+                }
+            }
+
+            .show-area {
+                width: 100%;
+                height: 100%;
+               
+
+                .show-area-wrap{
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+
+            }
+
+
+        }
+
+    }
+
+}

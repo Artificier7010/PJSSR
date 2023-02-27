@@ -1,8 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,4 +19,101 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.err-mark {
+  color: red;
+  text-align: left;
+  font-size: 13px;
+  width: 60%;
+}
+
+.toaster {
+  position: fixed;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 15px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: top 0.5s ease-in-out;
+}
+
+.toaster.visible {
+  top: 2rem;
+}
+
+.toaster.success {
+  background-color: rgb(137, 255, 137);
+  color: rgb(22, 109, 22);
+}
+
+.toaster.error {
+  background-color: rgb(255, 148, 148);
+  color: rgb(141, 51, 51);
+}
+
+
+// Loader ANimation
+
+.thin-10 {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(currentColor 0 0) right/51% 100% no-repeat;
+  display: flex;
+  animation: t10-0 2s linear infinite;
+}
+
+.thin-10:before,
+.thin-10:after {
+  content: "";
+  width: 15px;
+  background: currentColor;
+  animation: t10-1 2s linear infinite;
+}
+
+.thin-10:after {
+  animation-delay: -1s;
+  --s: -1;
+}
+
+@keyframes t10-1 {
+
+  0%,
+  100% {
+    transform: scaleX(var(--s, 1)) rotate(0)
+  }
+
+  25%,
+  75% {
+    transform: scaleX(var(--s, 1)) rotate(180deg)
+  }
+}
+
+@keyframes t10-0 {
+
+  0%,
+  49.9% {
+    transform: scaleX(1)
+  }
+
+  50%,
+  100% {
+    transform: scaleX(-1)
+  }
+}
+
+
+.file-btn{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(36, 36, 36);
+  color: white;
+  padding: 0 15px;
+  cursor: pointer;
 }

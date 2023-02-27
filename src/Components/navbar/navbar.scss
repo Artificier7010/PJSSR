@@ -120,7 +120,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 position: relative;
-                
+
 
                 button {
                     margin-right: 25px;
@@ -153,7 +153,8 @@
                         opacity: 1;
                         transition: 0.5s ease;
                     }
-                    &.navscrleffect{
+
+                    &.navscrleffect {
                         background: white;
                     }
 
@@ -223,6 +224,35 @@
 
                     .menuitmrev {
                         margin-left: 5px;
+                        position: relative;
+                        &:hover .dropdownlinks{
+                            visibility: visible;
+                            opacity: 1;
+                            translate: none;
+                        }
+
+                        .dropdownlinks {
+                            position: absolute;
+                            top: 120%;
+                            left: -50%;
+                            width: 200px;
+                            background: white;
+                            visibility: hidden;
+                            opacity: 0;
+                            translate: 0 10px 0;
+                            transition: 0.5s ease;
+                            padding: 15px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                            border-top: 2px solid var(--main-second-color);
+                            a{
+                                border-bottom: 1px solid rgba(208, 208, 208, 0.641);
+                                padding-bottom: 8px;
+                            }
+
+
+                        }
                     }
 
                     &:hover {
@@ -257,6 +287,19 @@
     height: 80px;
     transition: 0.5s ease;
     background: rgba(255, 255, 255, 0.726);
+}
+
+.custlink {
+    text-decoration: none;
+    font-weight: 500;
+   
+    color: var(--main-color);
+
+    &:hover {
+        color: var(--main-second-color);
+        
+    }
+
 }
 
 

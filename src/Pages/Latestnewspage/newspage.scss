@@ -1,0 +1,99 @@
+.Newspage {
+
+    .newspage-header {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: url('https://ik.imagekit.io/dexo68yudb/blog-header-creative-banner.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1676706548668');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.523);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .over-content {
+                margin-left: 15%;
+                color: aliceblue;
+
+                h1 {
+                    font-size: 4vw;
+                    font-weight: 500;
+                }
+
+                h2 {
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+
+    .category-list {
+        margin: 50px 60px;
+
+        .cat-menu {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+
+            a {
+                padding: 6px 15px;
+                border: 2px solid rgb(23, 23, 173);
+                text-decoration: none;
+                font-weight: 500;
+                color: black;
+
+                &:nth-child(even) {
+                    border: 2px solid rgb(255, 62, 62);
+                    &:hover{
+                        background:rgb(255, 62, 62) ;
+                        color: aliceblue;
+                    }
+                }
+                &:hover{
+                    background:rgb(23, 23, 173) ;
+                    color: aliceblue;
+                    
+                }
+            }
+
+        }
+    }
+
+    .newspage-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+
+        .featured {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .feat-wrap {
+                width: 95%;
+                padding: 25px;
+
+                h1 {
+                    color: rgb(131, 131, 131);
+                }
+            }
+
+
+        }
+
+
+    }
+}

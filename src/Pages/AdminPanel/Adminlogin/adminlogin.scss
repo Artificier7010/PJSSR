@@ -1,0 +1,130 @@
+.Adminlogin{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .adminlogin-wrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .adlog-left{
+            width: calc(100% - 400px);
+            background: url('https://ik.imagekit.io/dexo68yudb/75ez.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1677495714681');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            padding: 100px;
+
+            .left-content{
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.666);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                h1{
+                    font-size: 50px;
+                    color: rgb(255, 255, 255);
+                }
+                p{
+                    color: rgb(255, 255, 255);
+                }
+                a{
+                    text-decoration: none;
+                    border: 2px solid white;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 5px 15px;
+                    display: inline-block;
+                    width: 20%;
+                    text-align: center;
+                }
+            }
+            
+        }
+        .adlog-right{
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            form{
+                width: 100%;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                .row{
+                    width: 60%;
+                    height: 40px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 30px;
+                    .pass-input{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        input{
+                            width: calc(100% - 40px);
+                            height: 100%;
+                            background: rgb(227, 227, 227);
+
+                        }
+                        button{
+                            width: 40px;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            background: rgb(227, 227, 227);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            &:hover{
+                                background: rgb(210, 210, 210);
+                            }
+                        }
+                    }
+                    
+
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        padding-left: 15px;
+                        border: none;
+                        background: rgb(227, 227, 227);
+                        outline: none;
+                        
+
+                    }
+                    .sgn-btn{
+                        width: 60%;
+                        height: 100%;
+                        background: var(--main-color);
+                        color: aliceblue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        &:hover{
+                            background: rgb(255, 255, 255);
+                            border: 1px solid var(--main-color);
+                            color: var(--main-color);
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
