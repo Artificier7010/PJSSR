@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/PJSSR/static/css/main.7e6785d0.css",
-    "main.js": "/PJSSR/static/js/main.47ee3600.js",
+    "main.js": "/PJSSR/static/js/main.4f1a9bf8.js",
     "static/media/homepagevector.jpg": "/PJSSR/static/media/homepagevector.3fbe116317b2fa806f92.jpg",
     "static/media/logolight.png": "/PJSSR/static/media/logolight.01767444fad6db283f64.png",
     "static/media/logodark.png": "/PJSSR/static/media/logodark.823b92c2c9753d5bc122.png",
     "index.html": "/PJSSR/index.html",
     "main.7e6785d0.css.map": "/PJSSR/static/css/main.7e6785d0.css.map",
-    "main.47ee3600.js.map": "/PJSSR/static/js/main.47ee3600.js.map"
+    "main.4f1a9bf8.js.map": "/PJSSR/static/js/main.4f1a9bf8.js.map"
   },
   "entrypoints": [
     "static/css/main.7e6785d0.css",
-    "static/js/main.47ee3600.js"
+    "static/js/main.4f1a9bf8.js"
   ]
 }
