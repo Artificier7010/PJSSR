@@ -9,17 +9,18 @@ import Createadmin from './Pages/AdminPanel/CreateAdmin/Createadmin';
 import Adminlogin from './Pages/AdminPanel/Adminlogin/Adminlogin';
 import DataProvider from './Context/DataProvider';
 import Adminpanel from './Pages/AdminPanel/Adminpanel/Adminpanel';
-import { useState } from 'react';
+import { useState } from 'react'; 
+
 
 
 const PrivateRoute = ({ isAdminAuthenticated, ...props }) => {
-  return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/PJSSR'} />
+  return isAdminAuthenticated ? <><Outlet /></> : <Navigate replace to={'/admin'} />
 }
 
 
 function App() {
 
-  const [isAdminAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAdminAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <DataProvider>
@@ -27,7 +28,7 @@ function App() {
         <div className="App">
           <Routes>
             
-            <Route path='/PJSSR' element={<Homepage />} />
+            <Route path='/' element={<Homepage />} />
             <Route path='/aboutus/:abtid' element={<Aboutpage />} />
             <Route path='/services/:srvcid' element={<Servicepage />} />
             <Route path='/latestnews' element={<Newspage />} />

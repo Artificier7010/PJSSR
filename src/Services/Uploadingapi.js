@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_NOTIFICATION_MESSAGES, SERVICE_URLS } from '../Constants/config';
+import { UPLOAD_API_NOTIFICATION_MESSAGES, UPLOAD_SERVICE_URLS } from '../Constants/uploadconfig';
 import { getAccessToken } from '../Utils/Commonutils';
 
 const API_URL = 'http://localhost:8000';
@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
     timeout: 10000,
     headers: {
         Accept:"application/json",
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
     }
 
 })
@@ -51,7 +51,7 @@ const processError = (err) => {
         console.log("Error in response", err.toJSON());
         return {
             isError: true,
-            msg: API_NOTIFICATION_MESSAGES.responseFailure,
+            msg: UPLOAD_API_NOTIFICATION_MESSAGES.responseFailure,
             code: err.response.status
         }
 
@@ -59,7 +59,7 @@ const processError = (err) => {
         console.log("Error in request", err.toJSON());
         return {
             isError: true,
-            msg: API_NOTIFICATION_MESSAGES.requestFailure,
+            msg: UPLOAD_API_NOTIFICATION_MESSAGES.requestFailure,
             code: ""
         }
 
@@ -67,7 +67,7 @@ const processError = (err) => {
         console.log("Error in network", err.toJSON());
         return {
             isError: true,
-            msg: API_NOTIFICATION_MESSAGES.networkError,
+            msg: UPLOAD_API_NOTIFICATION_MESSAGES.networkError,
             code: ""
         }
 
@@ -75,10 +75,10 @@ const processError = (err) => {
 
 }
 
-const API = {};
+const UPLOAD_API = {};
 
-for (const [key, value] of Object.entries(SERVICE_URLS)) {
-    API[key] = (body, showUploadProgress, showDownloadProgress) => axiosInstance({
+for (const [key, value] of Object.entries(UPLOAD_SERVICE_URLS)) {
+    UPLOAD_API[key] = (body, showUploadProgress, showDownloadProgress) => axiosInstance({
         method: value.method,
         url: value.url,
         data: body,
@@ -102,6 +102,6 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
 
 }
 
-export { API };
+export { UPLOAD_API };
 
 

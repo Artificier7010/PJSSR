@@ -4,6 +4,7 @@ import './adminpanel.scss';
 import logo from '../../../Assets/Images/logolight.png';
 import { Link, useParams } from 'react-router-dom';
 import Createposts from '../CreatePosts/Createposts';
+import Showblogs from '../ShowBlogs/Showblogs';
 
 
 const Adminpanel = () => {
@@ -40,7 +41,7 @@ const Adminpanel = () => {
                     <div className={toggle ? "side-bar toggled" : "side-bar"}>
                         <div className="side-bar-wrap">
                             <ul>
-                                <li className={toggle ? "toggled": ''}><Link>{toggle ? <div><FaImages />&nbsp;Blogs</div> : <FaImages />}</Link></li>
+                                <li className={toggle ? "toggled": ''}><Link to={'/admin/dash/blogs'}>{toggle ? <div><FaImages />&nbsp;Blogs</div> : <FaImages />}</Link></li>
                                 <li className={toggle ? "toggled": ''}><Link>{toggle ? <div><FaUserShield />&nbsp;Admins</div> : <FaUserShield />}</Link></li>
                                 <li className={toggle ? "toggled": ''}><Link>{toggle ? <div><FaListAlt />&nbsp;Categories</div> : <FaListAlt />}</Link></li>
                                 <li className={toggle ? "toggled": ''}><Link>{toggle ? <div><FaUserCog />&nbsp;Profile</div>: <FaUserCog />}</Link></li>
@@ -58,7 +59,7 @@ const Adminpanel = () => {
                             {/* The Blogs Show Section */}
                             {/* **************************************** */}
                             {dashid === "blogs" ? (
-                                <>Hello</>
+                                <Showblogs/>
                             ) : dashid==="createposts" ? (
                                 <Createposts/>
                             ) : null}

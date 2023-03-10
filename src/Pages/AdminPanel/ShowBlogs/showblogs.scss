@@ -1,0 +1,118 @@
+.Showblogs {
+    width: 100%;
+    height: 100%;
+    // border: 2px solid red;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .show-blogs-wrap {
+        width: 100%;
+
+        .shw-heading {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background: white;
+            border-bottom: 2px solid rgba(201, 201, 201, 0.47);
+            .btns{
+                display: flex;
+                gap: 30px;
+
+                a {
+                    font-size: 25px;
+                    color: #4681f4;
+                    margin-right: 30px;
+                    display: flex;
+                    justify-content: center;
+                    text-decoration: none;
+                    align-items: center;
+                }
+            }
+
+        }
+
+        .created-blogs-section {
+            width: 100%;
+            margin-top: 50px;
+
+            .created-blogs {
+                width: 100%;
+                padding: 10px;
+
+                .blog-post {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto;
+                    gap: 40px;
+                    // background-color: #2196F3;
+                    padding: 10px;
+
+                    .blog-card {
+                        width: 300px;
+                        height: 400px;
+                        padding: 5px;
+                        background: rgb(243, 243, 243);
+                        border-radius: 15px;
+                        text-decoration: none;
+                        box-shadow: 0 0 15px rgb(157, 157, 157);
+
+                        img {
+                            width: 100%;
+                            height: 70%;
+                            object-fit: cover;
+                            object-position: center;
+                            border-radius: 15px;
+
+                        }
+
+                        .bcard-details {
+                            width: 100%;
+                            height: 30%;
+                            margin-top: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .badge-wrap {
+                                display: flex;
+                                gap: 15px;
+                                align-items: center;
+
+                                .badge {
+                                    padding: 6px 16px;
+                                    background: #7921f3;
+                                    color: white;
+                                    font-weight: 700;
+                                    border-radius: 24px;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    padding: 3px 15px;
+                                    border-radius: 24px;
+                                    background: rgb(255, 220, 95);
+                                    transition: 0.5s ease;
+                                    color: white;
+
+                                    &:hover {
+                                        background: rgb(216, 188, 60);
+                                        transition: 0.5s ease;
+                                    }
+                                }
+                            }
+
+                            h1 {
+                                font-size: 15px;
+                                color: rgb(34, 30, 30);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

@@ -52,7 +52,7 @@ const Adminlogin = ({setIsAuthenticated}) => {
             sessionStorage.setItem('refreshToken',`Bearer ${response.data.refreshToken}`);
             setIsAuthenticated(true);
             await setAccount({username:response.data.data.name,email:response.data.data.email});
-            navigate('/admin/dash');
+            navigate('/admin/dash/createposts');
         }else{
             setIsLoading(false);
             setShowError(true);

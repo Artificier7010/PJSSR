@@ -1,6 +1,6 @@
 // API_NOTIFICATION_MESSAGES
 
-export const API_NOTIFICATION_MESSAGES={
+export const UPLOAD_API_NOTIFICATION_MESSAGES={
     loading:{
         title:"Loading.....",
         message:'Data is Being Loaded, Please Wait'
@@ -27,10 +27,6 @@ export const API_NOTIFICATION_MESSAGES={
 // API SERVICE CALL
 // SAMPLE REQUEST
 // NEED SERVICE CALL: {url:'/',method:'POST/GET/UPDATE/DELETE',params:true/false,query:true/false}
-export const SERVICE_URLS={
-    adminSignup:{url:'/signup',method:'POST'},
-    adminLogin:{url:"/login",method:'POST'},
+export const UPLOAD_SERVICE_URLS={
     uploadImage:{url:"/file/upload",method:'POST'},
-    createPost:{url:'/create',method:'POST'},
-    getPosts:{url:'/posts',method:'GET'}
 }
